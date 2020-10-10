@@ -17,13 +17,13 @@ var getPlayerName = function() {
 //"LOSE" - Player robot's health is zero or less
 
 
-  //Alert users that they are starting the round.
-  
+  //Alert users that they are starting the round.  
   var fight = function(enemy) {
     
     while (playerInfo.health > 0 && enemy.health > 0) {
       // ask user if they'd liked to fight or run
       var promptFight = window.prompt('Would you like FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
+      promptFight = promptFight.toLowerCase();
       if (promptFight === "fight" || promptFight === "FIGHT") {
             // generate random damage value based on player's attack power
             var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
